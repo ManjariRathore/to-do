@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>To Do List</title>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <div class="todolist" id="todolist">
+        <h1>To-Do</h1>
+        <div class="input">
+          <input type="text" placeholder="task ?" id="TaskInput" class="in" />
+          <input type="date" id="DeadlineInput" class="in" />
+          <button class="add-btn" onclick="addTask()">Add Task</button>
+        </div>
+        <div class="TaskList" id="Tasklist">
+          <ul class="task" id="task"></ul>
+        </div>
+      </div>
+      <div class="cal" id="cal">
+        <div class="month" id="month"></div>
+        <div class="daysofweek" id="'daysofweek">
+          <div>Sun</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
+        </div>
+        <div class="days" id="days"></div>
+      </div>
+    </div>
+  </body>
+</html>
