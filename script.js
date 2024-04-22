@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     function getDaysInMonth(year, month) {
         return new Date(year, month, 0).getDate();
-      }
+    }
     let currentdate = new Date();
     let currentYear = currentdate.getFullYear();
     let currentMonth = currentdate.getMonth();
@@ -100,7 +100,7 @@ function addTask() {
     const id = generateId(8);
     tasks.push({id, text: taskText, deadline: taskDeadline, completed: false});
     saveTasksToLocalStorage();
-    console.log({tasks})
+    // console.log({tasks})
     if (taskText.trim() !== "") {
         var completeButton = document.createElement("button");
         completeButton.classList.add("circular-btn");
@@ -109,7 +109,9 @@ function addTask() {
         task.setAttribute("data-taskId", id);
         list.appendChild(task);
         task.appendChild(completeButton);
-        task.appendChild(document.createTextNode(taskText + " Deadline:" + taskDeadline.getDate()));
+        task.appendChild(document.createTextNode( taskText + " Deadline: " + taskDeadline.getDate()+" , "+ taskDeadline.toLocaleString('default', { month: 'long' })));
+
+
         completeButton.onclick = markAsComplete;
 
         let dayOfMonth = taskDeadline.getDate();

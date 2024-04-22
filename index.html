@@ -10,15 +10,21 @@
   <body>
     <div class="container" id="container">
       <div class="todolist" id="todolist">
-        <h1>To-Do</h1>
+        <h1>ToDo<img src="day.png" height="47px" width="47px" /></h1>
         <div class="input">
-          <input type="text" placeholder="task ?" id="TaskInput" class="in" />
-          <input type="date" id="DeadlineInput" class="in" />
-          <button class="add-btn" onclick="addTask()">Add Task</button>
+          <!-- <div> -->
+            <input type="text" placeholder="task ?" id="TaskInput" class="in" />
+            <input type="date" id="DeadlineInput"  class="in" />
+          <!-- </div> -->
+          <button class="add-btn" color="transperent" height="10px" width="10px"  onclick="addTask()"><img src="add-list.png" alt="Button Image" height="29px" width="29px"></button>
+
+          <button class="add-btn" height="10px" width="10px"  color="transperent" onclick="localStorage.clear()" ><img src="dustbin.png" alt="Button Image" height="27px" width="27px"></button>
         </div>
         <div class="TaskList" id="Tasklist">
-          <ul class="task" id="task"></ul>
+          <ul class="task" id="task">
+          </ul>
         </div>
+        <!-- <img src="axolotl.png" height="57px" width="57px" /> -->
       </div>
       <div class="cal" id="cal">
         <div class="month" id="month"></div>
@@ -31,7 +37,7 @@
           <div>Fri</div>
           <div>Sat</div>
         </div>
-        <div class="days" id="days"></div>
+        <div class="days" id="days" ></div>
       </div>
     </div>
   </body>
